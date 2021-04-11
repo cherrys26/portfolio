@@ -1,7 +1,12 @@
 import logo from './logo.svg';
+
+import Contact from './components/Contact/Contact'
+
+import 'primereact/resources/themes/vela-blue/theme.css';
 import './App.css';
 
 function App() {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,7 +22,9 @@ function App() {
         >
           Learn React
         </a>
+
       </header>
+      <Contact></Contact>
     </div>
   );
 }
