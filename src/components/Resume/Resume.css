@@ -1,0 +1,9 @@
+.resume {
+    width: 80%;
+    background-color: rgba(128, 0, 128, 0.075);
+}
+
+.resumeGrid {
+    align-items: center;
+    text-align: -webkit-center;
+}

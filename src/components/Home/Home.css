@@ -1,0 +1,13 @@
+.p-avatar img {
+    border-radius: 10px;
+    width: 18rem;
+    height: 18rem;
+}
+
+.p-grid {
+    width: -webkit-fill-available;
+}
+
+.p-justify-between {
+    align-items: center;
+}
