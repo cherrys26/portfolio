@@ -27,7 +27,7 @@ export default function Home() {
                 </div>
             </Fade>
             <Fade right>
-                <div className="box">p-col-12 p-md-6 p-lg-3</div>
+                <div className="p-col-12 p-md-2 p-lg-3">p-col-12 p-md-6 p-lg-3</div>
             </Fade>
         </div>
 

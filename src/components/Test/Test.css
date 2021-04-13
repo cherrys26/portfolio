@@ -30,3 +30,7 @@
 .fade-exit-active .btn {
   transition: opacity 500ms, transform 500ms;
 }
+
+.image-hover-opacity {
+  opacity: 0.5;
+}

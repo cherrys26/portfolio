@@ -1,0 +1,67 @@
+{
+    "data": [
+        {
+            "title": "Trymilestone.com",
+            "time": "Feb 2021 – Apr 2021",
+            "description": [
+                "Start-Up company Front-End Designer.",
+                "Created UI page schematic design."
+            ],
+            "technology": "HTML, JavaScript, CSS, jQuery"
+        },
+        {
+            "title": "Website layout",
+            "time": "Mar 2021 - Mar 2021",
+            "description": [
+                "Responsive boilerplate website that can be fully redesigned via RESTful API.",
+                "Created custom API server with Node.js.",
+                "Researched new front-end methodologies, paradigms, and designs - on popular sites - to create customized themes."
+            ],
+            "technology": "HTML, SASS, Typescript, JavaScript, Angular 11, Node.js, GIT"
+        },
+        {
+            "title": "Trendy-Tendie",
+            "time": "Feb 2021 - Mar 2021",
+            "description": [
+                "Mobile app that tracks and analyzes user sentiments (via Twitter and Reddit API).",
+                "Read and manipulate stock and cryptocurrency data via https://finnhub.io and https://api.nomics.co API’s.",
+                "Used Chart.js to display stock and cryptocurrency information dynamically based on screen orientation and user filters. ",
+                "Created UI and UX wireframe designs and user story workflows using Lunacy. ",
+                "Followed front-end development best practices by developing architecture before development.",
+                "Worked with a business analyst to enhance UX"
+            ],
+            "technology": "HTML, SASS, Typescript, Chart.js 2, GIT, Ionic 5, Angular 11 (Front-end & API calls), Lunacy"
+        },
+        {
+            "title": "Comfy House Mobile App",
+            "time": "Feb 2021 - Feb 2021",
+            "description": [
+                "Created an ecommerce platform for an existing web application.",
+                "Functionality to CRUD products and categories.",
+                "Worked with responsive design in both Android & Apple mobile phones"
+            ],
+            "technology": "HTML, SASS, Typescript, JavaScript, Ionic 5, Angular 11, GIT, Node.js"
+        },
+        {
+            "title": "Comfy House WebApp",
+            "time": "Jan 2021 - Feb 2021",
+            "description": [
+                "Responsive ecommerce platform with cart, category, and product capabilities.",
+                "API based front-end to allow for dynamic designs.",
+                "Worked with local storage and best practices on how to optimize UX."
+            ],
+            "technology": "HTML, CSS, JavaScript, GIT, Node.js"
+        },
+        {
+            "title": "Contact Manager",
+            "time": "Jan 2021 - Jan 2021",
+            "description": [
+                "Responsive website to create, read, update, and delete contact information.",
+                "Ability to add new workers’ details and filter through data.",
+                "Get user data via Angular API calls.",
+                "Used Angular materials to create a clean and responsive layout."
+            ],
+            "technology": "HTML, SASS, JavaScript, Typescript, GIT"
+        }
+    ]
+}

@@ -1,20 +1,26 @@
-import React from 'react';
-import LightSpeed from 'react-reveal/LightSpeed';
+import { Card } from 'primereact/card';
+import React, { useEffect, useState } from 'react';
+import './Test.css'
 
-class SwingExample extends React.Component {
+class Example extends React.Component {
+    constructor() {
+        super();
+        this.state = {};
+    }
+    mouseEnter() {
+        console.log('mouse enter')
+        document.querySelector('img').classList.add('.image-hover-opacity')
+    }
+
+    mouseLeave() {
+        console.log('mouse leave')
+        document.querySelector('img').classList.remove('.image-hover-opacity')
+    }
     render() {
         return (
-            <div>
-
-                <div>
-                    <LightSpeed cascade>
-                        <h1>React Reveal</h1>
-                    </LightSpeed>
-                </div>
-            </div>
+            <img src="http://i.imgur.com/PLKabDV.png" onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} />
         );
     }
 }
 
-
-export default SwingExample;
+export default Example;
