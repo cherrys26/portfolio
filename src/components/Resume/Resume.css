@@ -1,6 +1,6 @@
 .resume {
-    width: 80%;
     background-color: rgba(128, 0, 128, 0.075);
+    padding: 0;
 }
 
 .resumeGrid {
@@ -11,4 +11,32 @@
 .p-dataview.p-dataview-list .p-dataview-content > .p-grid > div {
     border: solid white;
     text-align: -webkit-center;
+}
+
+.p-tabview .p-tabview-panels {
+    padding-right: 10rem;
+    padding-left: 10rem;
+    background: rgba(128, 0, 128, 0.075);
+}
+
+.tabview .tabview-custom i,
+.tabview .tabview-custom span {
+    vertical-align: middle;
+}
+
+.tabview .tabview-custom span {
+    margin: 0 0.5rem;
+}
+
+.tabview .p-button {
+    margin-right: 0.25rem;
+}
+
+.tabview .p-tabview p {
+    line-height: 1.5;
+    margin: 0;
+}
+
+.p-card-content ul {
+    text-align: left;
 }
