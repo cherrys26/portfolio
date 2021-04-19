@@ -9,15 +9,17 @@ export default function Contact() {
     return (
         <section>
             <h1>Contact Me</h1>
-            <div className="p-grid p-justify-center" >
-                <LightSpeed cascade>
-                    <div>
+            <LightSpeed cascade>
+                <div className="p-grid p-justify-around" >
+                    <div className="p-col-12 p-md-8 p-lg-6">
                         <Mail></Mail>
-
+                    </div>
+                    <div className="p-col-12 p-md-8 p-lg-6">
                         <Location></Location>
                     </div>
-                </LightSpeed>
-            </div >
+
+                </div >
+            </LightSpeed>
         </section>
     )
 }

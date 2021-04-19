@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Inplace, InplaceDisplay, InplaceContent } from 'primereact/inplace';
 import { Card } from 'primereact/card';
-import { Column } from 'primereact/column';
 import ExperienceService from '../../services/Experience';
 
 export default function Rest() {
@@ -22,7 +21,13 @@ export default function Rest() {
                 </InplaceDisplay>
                     <InplaceContent>
                         <Card value={products}>
-                            <div>{products.one}</div>
+                            <div>
+                                <ul>
+                                    <li>{products.one}</li>
+                                    <li>{products.two}</li>
+                                    <li>{products.three}</li>
+                                </ul>
+                            </div>
                         </Card>
                     </InplaceContent>
                 </Inplace>

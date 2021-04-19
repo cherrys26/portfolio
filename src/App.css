@@ -84,3 +84,11 @@
   width: 25rem;
   height: 20rem;
 }
+
+#location {
+  display: -webkit-inline-box;
+}
+
+p-card {
+  width: -webkit-fill-available;
+}

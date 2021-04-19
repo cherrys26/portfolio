@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Inplace, InplaceDisplay, InplaceContent } from 'primereact/inplace';
 import { Card } from 'primereact/card'
 import { DataView } from 'primereact/dataview'
-import { DataTable } from 'primereact/datatable';
 import { TabView, TabPanel } from 'primereact/tabview';
 import { Button } from 'primereact/button'
 import Bounce from 'react-reveal/Bounce'
@@ -38,14 +37,34 @@ export default function Resume() {
                     <div className="p-card-subtitle"> {data.time} </div>
                     <div className="p-card-footer"><strong>Technologies Used:</strong> {data.technology}</div>
                     <br />
-                    <Inplace onOpen={onOpen}>
+                    <Inplace>
                         <InplaceDisplay>
                             <Button label="More Info"></Button>
                         </InplaceDisplay>
                         <InplaceContent>
-                            <DataTable value={description}>
-                                <div></div>
-                            </DataTable>
+                            <Card>
+                                <ul>
+                                    <div>
+                                        {data.description.one}
+                                    </div>
+                                    <div>
+                                        {data.description.two}
+                                    </div>
+                                    <div>
+                                        {data.description.three}
+                                    </div>
+                                    <div>
+                                        {data.description.four}
+                                    </div>
+                                    <div>
+                                        {data.description.five}
+                                    </div>
+                                    <div>
+                                        {data.description.six}
+                                    </div>
+
+                                </ul>
+                            </Card>
                         </InplaceContent>
                     </Inplace>
                 </Card>

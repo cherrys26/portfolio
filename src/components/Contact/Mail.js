@@ -27,7 +27,7 @@ export default function Mail() {
 
         <div>
             <Toast ref={useToast}></Toast>
-            <Card style={{ width: "30rem" }}>
+            <Card >
                 <br />
                 <div className="p-fluid p-grid" style={{ justifyContent: "center" }}>
 

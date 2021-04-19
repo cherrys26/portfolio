@@ -7,10 +7,11 @@ import {
     useLoadScript,
     Marker
 } from '@react-google-maps/api';
+import '../../App.css'
 
 const mapContainerStyle = {
-    width: '25vh',
-    height: '25vh',
+    width: '35vh',
+    height: '35vh',
 };
 const center = {
     lat: 43.72332946813944,
@@ -29,8 +30,9 @@ export default function Location() {
     return (
 
         <div >
-            <Card style={{ width: "30rem" }}>
+            < Card >
                 <li className="pi pi-home">Brampton, ON</li>
+                <br />
                 <br />
                 <li className="pi pi-phone">(647)784-0190</li>
 
@@ -41,8 +43,8 @@ export default function Location() {
 
 
                 </GoogleMap>
-            </Card>
-        </div>
+            </Card >
+        </div >
 
     )
 }
