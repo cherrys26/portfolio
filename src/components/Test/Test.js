@@ -1,113 +1,62 @@
+// import React from "react";
+// import { useState, useRef, useLayoutEffect, useEffect } from "react";
+// import { images } from "./Refresh";
+// import { motion, useViewportScroll, useTransform, AnimatePresence, useCycle } from "framer-motion";
+// import "./Test.css";
+// import ExperienceService from '../../services/Experience'
 
-// import React from 'react';
-// import './Test.css'
+// const ParallaxImage = ({ src, ...style }) => {
+//   const [elementTop, setElementTop] = useState(0);
+//   const ref = useRef(null);
+//   const { scrollY } = useViewportScroll();
 
-// class Example extends React.Component {
-//     constructor() {
-//         super();
-//         this.state = {};
-//     }
-//     mouseEnter() {
-//         console.log('mouse enter')
-//         document.getElementById('test').classList.add('.image-hover-opacity')
-//         document.getElementById('test').style.width = "50rem"
-//     }
+//   const y = useTransform(scrollY, [elementTop, elementTop + 1], [0, -1], {
+//     clamp: false
+//   });
 
-//     mouseLeave() {
-//         console.log('mouse leave')
-//         document.getElementById('test').classList.remove('.image-hover-opacity')
-//         document.getElementById('test').style.width = ""
+//   useLayoutEffect(() => {
+//     const element = ref.current;
+//     setElementTop(element.offsetTop);
+//   }, [ref]);
 
-//     }
-//     render() {
-//         return (
-//             <img src="http://i.imgur.com/PLKabDV.png" onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} id="test" alt="test" className="" />
-//         );
-//     }
-// }
-
-// export default Example;
+//   return (
+//     <div ref={ref} className="image-container">
+//       <motion.div className="overlay" style={{ ...style, y }} />
+//       <img src={src} alt="" />
+//     </div>
+//   );
+// };
 
 
-// import React, { Component, createRef } from "react";
+// export default function Test() {
 
-// export default class Example extends Component {
-//     scrollDiv = createRef();
 
-//     scrollSmoothHandler = () => {
-//         this.scrollDiv.current.scrollIntoView({ behavior: "smooth" });
-//     };
+//   return (
+//     <>
+//       <div className="container-test">
+//         {images.map(image => (
+//           <div className="section">
+//             <div><h1><strong>About Me</strong></h1> </div>
+//             <div className="p-grid p-justify-between ">
+//               <div className="p-col-12 p-md-12 p-lg-5 about-main">
+//                 <ParallaxImage key={image.src} {...image} />
 
-//     render() {
-//         return (
-//             <div className="example">
-//                 <div className="longDiv">
-//                     <h1>Hello CodeSandbox</h1>
-//                     <button onClick={this.scrollSmoothHandler}>click me!</button>
-//                     <h2>Start editing to see some magic happen!</h2>
-//                 </div>
-
-//                 <div ref={this.scrollDiv}>hi</div>
+//                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+//                 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+//                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+//               </div>
+//               <div className="p-col-12 p-md-12 p-lg-5">
+//               </div>
 //             </div>
-//         );
-//     }
-// }
+//           </div>
+//         ))}
+//         <ParallaxImage {...images[0]} {...images[8]} />
+//         <div>
+//           <ParallaxImage {...images[0]} {...images[9]} />
+// Hello</div>
+//         <ParallaxImage {...images[0]} {...images[8]} />
+//       </div>
+//     </>
+//   )
+// };
 
-
-import React, { Component } from 'react';
-import axios from 'axios';
-
-const API = 'https://hn.algolia.com/api/v1/search?query=';
-const DEFAULT_QUERY = 'redux';
-
-export default class Example extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            hits: [],
-            isLoading: false,
-            error: null,
-        };
-    }
-
-    componentDidMount() {
-        this.setState({ isLoading: true });
-
-        axios.get(API + DEFAULT_QUERY)
-            .then(result => this.setState({
-                hits: result.data.hits,
-                isLoading: false
-            }))
-            .catch(error => this.setState({
-                error,
-                isLoading: false
-            }));
-    }
-
-    render() {
-        const { hits, isLoading } = this.state;
-
-        if (isLoading) {
-            return <p>Loading ...</p>;
-        }
-
-        return (
-            <ul>
-                {hits.map(hit =>
-                    <div>
-                        <li key={hit.objectID}>
-                            <a href={hit.url}>{hit.points}<br />{hit.title}</a>
-                        </li>
-                        <li key={hit.objectID}>
-                            <a href={hit.url}>{hit._highlightResult.title.matchLevel}</a>
-                        </li>
-                        <li key={hit.objectID}>
-                            <a href={hit.url}>{hit._highlightResult.title.value}</a>
-                        </li>
-                    </div>
-                )}
-            </ul>
-        );
-    }
-}

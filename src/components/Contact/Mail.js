@@ -2,7 +2,6 @@ import { InputText } from 'primereact/inputtext'
 import { InputTextarea } from 'primereact/inputtextarea'
 import { Button } from 'primereact/button'
 import { Toast } from 'primereact/toast'
-import { Card } from 'primereact/card'
 
 import React, { useState, useRef } from 'react';
 import 'primereact/resources/primereact.css';
@@ -26,35 +25,38 @@ export default function Mail() {
     return (
 
         <div>
-            <Toast ref={useToast}></Toast>
-            <Card >
-                <br />
-                <div className="p-fluid p-grid" style={{ justifyContent: "center" }}>
+            <Toast ref={useToast} position="bottom-left"></Toast>
 
-                    <span className="p-float-label">
-                        <InputText id="name" value={name} onChange={(e) => setName(e.target.value)} />
-                        <label htmlFor="name">Name</label>
-                    </span>
-                </div>
-                <br />
-                <div className="p-fluid p-grid" style={{ justifyContent: "center" }}>
+            <br />
+            <div className="p-fluid p-grid" style={{ justifyContent: "center" }}>
 
-                    <span className="p-float-label">
-                        <InputText id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <label htmlFor="email">Email</label>
-                    </span>
-                </div>
-                <br />
-                <div className="p-fluid p-grid" style={{ justifyContent: "center" }}>
+                <span className="p-float-label">
+                    <InputText id="name" value={name} onChange={(e) => setName(e.target.value)} />
+                    <label htmlFor="name">Name</label>
+                </span>
+            </div>
+            <br />
+            <br />
+            <div className="p-fluid p-grid" style={{ justifyContent: "center" }}>
 
-                    <span className="p-float-label">
-                        <InputTextarea id="textarea" value={message} onChange={(e) => setMessage(e.target.value)} rows={4} cols={22.5} />
-                        <label htmlFor="textarea">Textarea</label>
-                    </span>
-                </div>
-                <br />
-                <Button label="Send" onClick={onSendClick} />
-            </Card>
+                <span className="p-float-label">
+                    <InputText id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <label htmlFor="email">Email</label>
+                </span>
+            </div>
+            <br />
+            <br />
+            <div className="p-fluid p-grid" style={{ justifyContent: "center" }}>
+
+                <span className="p-float-label">
+                    <InputTextarea id="textarea" value={message} onChange={(e) => setMessage(e.target.value)} rows={4} cols={22.5} />
+                    <label htmlFor="textarea">Textarea</label>
+                </span>
+            </div>
+            <br />
+            <br />
+            <Button label="Send" onClick={onSendClick} />
+
         </div >
 
     )

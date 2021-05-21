@@ -14,7 +14,7 @@
   }
 }
 
-.App-header {
+.section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -91,4 +91,19 @@
 
 p-card {
   width: -webkit-fill-available;
+}
+
+.p-component,
+.p-component * {
+  align-self: center;
+}
+
+.about-main {
+  height: 40vmin;
+  margin: auto;
+  font-size: large;
+}
+
+.p-card .p-card-body {
+  background-color: lawngreen;
 }

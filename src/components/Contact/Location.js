@@ -1,7 +1,6 @@
 
 import React from 'react';
 import 'primereact/resources/primereact.css';
-import { Card } from 'primereact/card'
 import {
     GoogleMap,
     useLoadScript,
@@ -30,11 +29,14 @@ export default function Location() {
     return (
 
         <div >
-            < Card >
-                <li className="pi pi-home">Brampton, ON</li>
-                <br />
-                <br />
-                <li className="pi pi-phone">(647)784-0190</li>
+            <div className="p-grid p-justify-around contact">
+
+                <div>
+                    <li className="pi pi-home">Brampton, ON</li>
+                    <br />
+                    <br />
+                    <li className="pi pi-phone">(647)784-0190</li>
+                </div>
 
                 <GoogleMap mapContainerStyle={mapContainerStyle} zoom={12} center={center}>
 
@@ -43,7 +45,8 @@ export default function Location() {
 
 
                 </GoogleMap>
-            </Card >
+
+            </div>
         </div >
 
     )

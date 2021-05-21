@@ -11,10 +11,35 @@ import Home from './components/Home/Home';
 import Resume from './components/Resume/Resume';
 import About from './components/About/About';
 
-import React, { Component, createRef } from 'react'
-import Example from './components/Test/Test';
-import Rest from './components/Resume/Rest'
+import React, { Component, createRef, useState } from 'react'
+// import Test from './components/Test/Test';
+import { motion, useViewportScroll, useTransform } from "framer-motion";
+import Example from './components/Test/Example'
+import Testing from './components/Test/Refresh'
 
+
+function CheckScroll() {
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, -300], [0.2, 1]);
+
+  return (
+    <div className="wrapper-scroll">
+      <motion.div
+        className="container-scroll"
+        style={{
+          scale
+        }}
+      >
+        <motion.div
+          className="item-scroll"
+          style={{
+            scaleY: scrollYProgress
+          }}
+        />
+      </motion.div>
+    </div>
+  )
+}
 export default class App extends Component {
 
   scrollHome = createRef();
@@ -35,14 +60,13 @@ export default class App extends Component {
     this.scrollResume.current.scrollIntoView({ behavior: "smooth" })
   };
 
-
   content = (
     <React.Fragment>
       <Button className="p-button-text" onClick={this.scrollToHome}>Home</Button>
       <Divider layout="vertical" />
-      <Button className="p-button-text" onClick={this.scrollToAbout}>About Me</Button>
-      <Divider layout="vertical" />
       <Button className="p-button-text" onClick={this.scrollToResume}>Experience</Button>
+      <Divider layout="vertical" />
+      <Button className="p-button-text" onClick={this.scrollToAbout}>About Me</Button>
       <Divider layout="vertical" />
       <Button className="p-button-text" onClick={this.scrollToContact}>Contact</Button>
     </React.Fragment>
@@ -54,30 +78,31 @@ export default class App extends Component {
       <div className="App">
         <ScrollTop threshold={300} className="custom-scrolltop" icon="pi pi-arrow-up" />
         <Toolbar left={this.content} />
+        <Testing />
         <div className="body">
-          <header className="App-header" ref={this.scrollHome}>
+          <header className="section" ref={this.scrollHome}>
             <Home></Home>
           </header>
+          {/* <Test /> */}
           <div ref={this.scrollResume}></div>
-          <br />
-          <br />
-          <br />
           <Resume></Resume>
           <div ref={this.scrollAbout}></div>
-          <br />
-          <br />
-          <br />
           <About></About>
           <div ref={this.scrollContact}></div>
-          <br />
-          <br />
-          <br />
           <Contact></Contact>
-          <Rest></Rest>
 
-          <Example></Example>
+          <div>
+            Break
+            <br />
+          </div>
+          <div className="example-container">
+
+
+          </div>
         </div>
+
       </div >
     );
   }
 }
+
